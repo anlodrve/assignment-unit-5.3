@@ -24,3 +24,17 @@ function showCollection(array){
         }
 }
 console.log(showCollection(collection));
+
+function findByArtist(artist){
+    let artistArray = [];
+    for(recordObject of collection){
+        if(recordObject.artist === artist){
+            artistArray.push(recordObject);
+        } //end if true 
+    } //end for loop
+    return artistArray;
+} //end findByArtist
+
+console.log(findByArtist("Joni Mitchell"));
+console.log(findByArtist("Beyonce"));
+console.log(findByArtist("The Beatles"));
